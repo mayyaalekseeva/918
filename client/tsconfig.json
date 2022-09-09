@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "outDir": "./build",
+    "strictNullChecks": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "downlevelIteration": true,
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "target": "es6",
+    "jsx": "react",
+    "allowJs": true,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "paths": {
+      "@app": ["src"],
+      "@assets": ["assets"]
+    },
+    "lib": [
+      "dom",
+      "es6",
+      "esnext.intl",
+      "es2017.intl",
+      "es2018.intl",
+      "es2020.bigint"
+    ]
+  },
+  "include": ["./src/**/*", "./typings/*.d.ts"],
+  "exclude": ["node_modules"]
+}

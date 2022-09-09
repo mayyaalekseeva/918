@@ -1,0 +1,49 @@
+.container {
+  min-height: 1000px;
+
+  & h1 {
+    color: black;
+    padding: 3rem 0 0 215px;
+    margin: 0;
+  }
+}
+
+.about {
+  display: flex;
+  text-align: justify;
+  align-items: center;
+  padding: 0 2rem;
+
+  & p {
+    line-height: 1.5;
+    letter-spacing: 0.3px;
+    word-spacing: 2px;
+    margin: 0 0 0 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-text {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+.chip {
+  justify-content: center;
+  display: flex;
+  padding: 2rem;
+
+  & div {
+    margin: 0 30px;
+  }
+}
+
+.stack {
+  padding: 2rem;
+
+  & img {
+    width: 100px;
+    height: 100px;
+  }
+}

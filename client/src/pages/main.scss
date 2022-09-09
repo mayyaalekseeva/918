@@ -1,0 +1,14 @@
+// @use "@app/theme/variables" as variables;
+@use "@app/theme/mixins";
+
+.public {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex: 1;
+
+  &-content {
+    padding: 0 0 0 200px;
+    // background-color: variables.$bcg-color;
+  }
+}
