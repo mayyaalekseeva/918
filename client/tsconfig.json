@@ -18,8 +18,9 @@
     "skipLibCheck": true,
     "baseUrl": "./",
     "paths": {
-      "@app": ["src"],
-      "@assets": ["assets"]
+      "@app/*": ["src/*"],
+      "@assets/*": ["assets/*"],
+      "@languages/*": ["languages/*"]
     },
     "lib": [
       "dom",

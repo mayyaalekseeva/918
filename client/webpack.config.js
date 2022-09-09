@@ -73,6 +73,7 @@ module.exports = {
     alias: {
       "@app": path.resolve(__dirname, "src"),
       "@assets": path.resolve(__dirname, "assets"),
+      "@languages": path.resolve(__dirname, "languages"),
     },
     extensions: ["", ".js", ".jsx", ".tsx", ".ts"],
   },

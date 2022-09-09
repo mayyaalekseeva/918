@@ -1,14 +1,29 @@
 import React, { FC } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Main } from "./pages";
+import { Header } from "@app/components";
+
+export enum Navigation {
+  MAIN = "main",
+  MENU = "menu",
+  TEAM = "team",
+  RESERVE = "reserve",
+  CONTACTS = "contacts",
+}
 
 const getRoutes = () => {
   const root = "";
-  const about = `${root}/about`;
+  const menu = `${root}/menu`;
+  const team = `${root}/team`;
+  const reserve = `${root}/reserve`;
+  const contacts = `${root}/contacts`;
 
   return {
     root,
-    about,
+    menu,
+    team,
+    reserve,
+    contacts,
   };
 };
 
@@ -17,7 +32,8 @@ export const routes = getRoutes();
 const Routing: FC = () => {
   return (
     <BrowserRouter>
-      <span>routing</span>
+      {/* <span>routing</span> */}
+      <Header />
       <Routes>
         <Route path="/" element={<Main />} />
       </Routes>
