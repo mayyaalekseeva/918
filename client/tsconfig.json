@@ -20,7 +20,7 @@
     "paths": {
       "@app/*": ["src/*"],
       "@assets/*": ["assets/*"],
-      "@languages/*": ["languages/*"]
+      "@languages/*": ["compiled-lang/*"]
     },
     "lib": [
       "dom",
@@ -29,8 +29,17 @@
       "es2017.intl",
       "es2018.intl",
       "es2020.bigint"
+    ],
+    "plugins": [
+      {
+        "transform": "@formatjs/ts-transformer",
+        "import": "transform",
+        "type": "config",
+        "overrideIdFn": "[sha512:contenthash:base64:6]",
+        "ast": true
+      }
     ]
   },
-  "include": ["./src/**/*", "./typings/*.d.ts"],
+  "include": ["./src/**/*", "./typings/*.d.ts", "./assets/**/*"],
   "exclude": ["node_modules"]
 }

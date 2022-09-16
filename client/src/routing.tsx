@@ -3,14 +3,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Main } from "./pages";
 import { Header } from "@app/components";
 
-export enum Navigation {
-  MAIN = "main",
-  MENU = "menu",
-  TEAM = "team",
-  RESERVE = "reserve",
-  CONTACTS = "contacts",
-}
-
 const getRoutes = () => {
   const root = "";
   const menu = `${root}/menu`;

@@ -1,0 +1,17 @@
+{
+  "navContacts": {
+    "defaultMessage": "Contacts"
+  },
+  "navMain": {
+    "defaultMessage": "Main"
+  },
+  "navMenu": {
+    "defaultMessage": "Menu"
+  },
+  "navReserve": {
+    "defaultMessage": "Reserve"
+  },
+  "navTeam": {
+    "defaultMessage": "Team"
+  }
+}

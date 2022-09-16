@@ -20,7 +20,7 @@ export const Context = React.createContext<IntlController>({
   currentLanguage: Language.RU,
 });
 
-const IntlWrapper: React.FC = ({ children }: React.PropsWithChildren) => {
+const IntlWrapper: React.FC<React.PropsWithChildren> = ({ children }) => {
   const [intlProps, setIntlProps] = React.useState({
     messages: {},
     locale: Language.RU,

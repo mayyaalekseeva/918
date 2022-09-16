@@ -1,0 +1,17 @@
+{
+  "navContacts": {
+    "defaultMessage": "Контакты"
+  },
+  "navMain": {
+    "defaultMessage": "Главная"
+  },
+  "navMenu": {
+    "defaultMessage": "Меню"
+  },
+  "navReserve": {
+    "defaultMessage": "Резерв"
+  },
+  "navTeam": {
+    "defaultMessage": "Команда"
+  }
+}

@@ -1,6 +1,7 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const scssImporter = require("./webpack/scss-importer");
+const tsTransformPaths = require("@zerollup/ts-transform-paths");
 
 const path = require("path");
 
@@ -18,8 +19,17 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        use: "ts-loader",
+        loader: "ts-loader",
         exclude: /node_modules/,
+        options: {
+          getCustomTransformers: (program) => {
+            const transformer = tsTransformPaths(program);
+
+            return {
+              afterDeclarations: [transformer.afterDeclarations],
+            };
+          },
+        },
       },
       {
         test: /\.css$/i,
@@ -67,15 +77,35 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.svg$/,
+        type: "asset/source",
+        issuer: /\.tsx?|.jsx?$/,
+      },
+      {
+        test: /\.svg$/,
+        type: "asset/inline",
+        issuer: /\.scss?$/,
+      },
     ],
   },
   resolve: {
     alias: {
       "@app": path.resolve(__dirname, "src"),
       "@assets": path.resolve(__dirname, "assets"),
-      "@languages": path.resolve(__dirname, "languages"),
+      "@languages": path.resolve(__dirname, "compiled-lang"),
     },
-    extensions: ["", ".js", ".jsx", ".tsx", ".ts"],
+    extensions: [
+      ".js",
+      ".jsx",
+      ".ts",
+      ".tsx",
+      ".scss",
+      ".css",
+      ".svg",
+      ".ico",
+      ".json",
+    ],
   },
   plugins: [
     new MiniCssExtractPlugin({
