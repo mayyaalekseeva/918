@@ -1,8 +1,16 @@
 .header {
   width: 100%;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 20% auto 10% 10%;
   background-color: #f6eddf;
   height: fit-content;
   box-sizing: border-box;
+
+  .nav {
+    grid-column: 2;
+  }
+
+  .language-selector {
+    grid-column: 4;
+  }
 }

@@ -1,3 +1,5 @@
+@use "@app/theme/variables" as variables;
+
 .nav-item {
   width: 100%;
   display: inline-flex;
@@ -5,18 +7,33 @@
   align-items: center;
   list-style: none;
   cursor: pointer;
+  border: 1px solid transparent;
+
+  &__text {
+    color: variables.$green;
+    line-height: 30px;
+    font-style: normal;
+    letter-spacing: 0.001em;
+    font-weight: 400;
+    font-size: 24px;
+    text-transform: capitalize;
+
+    // &:hover {
+    //   font-weight: 550;
+    // }
+  }
 
   &.nav-item--active {
     .nav-item__link {
       .nav-item__icon {
         svg > * {
           fill-opacity: inherit;
-          fill: #054f2f;
+          fill: variables.$green;
         }
       }
 
       .nav-item__text {
-        color: #054f2f;
+        color: variables.$green;
       }
     }
   }
@@ -33,16 +50,6 @@
       svg {
         display: flex;
       }
-    }
-
-    .nav-item__text {
-      color: #054f2f;
-      line-height: 30px;
-      font-style: normal;
-      letter-spacing: 0.001em;
-      font-weight: 400;
-      font-size: 24px;
-      text-transform: capitalize;
     }
   }
 }

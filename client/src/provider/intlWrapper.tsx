@@ -52,10 +52,17 @@ const IntlWrapper: React.FC<React.PropsWithChildren> = ({ children }) => {
     <Context.Provider
       value={{
         changeLanguage,
-        currentLanguage: intlProps.locale,
+        currentLanguage: localStorage["locale"]
+          ? localStorage["locale"]
+          : Language.RU,
       }}
     >
-      <IntlProvider {...intlProps} defaultLocale={Language.RU}>
+      <IntlProvider
+        {...intlProps}
+        defaultLocale={
+          localStorage["locale"] ? localStorage["locale"] : Language.RU
+        }
+      >
         {children}
       </IntlProvider>
     </Context.Provider>
