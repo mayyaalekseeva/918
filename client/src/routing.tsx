@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Main } from "./pages";
 import { Header } from "@app/components";
+import Footer from "@app/components/footer";
 
 const getRoutes = () => {
   const root = "";
@@ -29,6 +30,7 @@ const Routing: FC = () => {
       <Routes>
         <Route path="/" element={<Main />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };

@@ -1,5 +1,7 @@
 import * as React from "react";
 import { IntlProvider } from "react-intl";
+import ru from "@languages/ru.json";
+import en from "@languages/en.json";
 
 export enum Language {
   EN = "en",
@@ -22,25 +24,25 @@ export const Context = React.createContext<IntlController>({
 
 const IntlWrapper: React.FC<React.PropsWithChildren> = ({ children }) => {
   const [intlProps, setIntlProps] = React.useState({
-    messages: {},
+    messages: localStorage.locale == "ru" ? ru : en,
     locale: Language.RU,
   });
 
   const loadLocaleData = (locale: Language) => {
     switch (locale) {
       case "en":
-        return import("@languages/en.json");
+        return en;
       default:
-        return import("@languages/ru.json");
+        return ru;
     }
   };
 
   const changeIntlProps = (code: Language) => {
-    loadLocaleData(code).then((data) => {
-      setIntlProps({
-        messages: data,
-        locale: code,
-      });
+    const messages = loadLocaleData(code);
+
+    setIntlProps({
+      messages,
+      locale: code,
     });
   };
 
@@ -57,14 +59,7 @@ const IntlWrapper: React.FC<React.PropsWithChildren> = ({ children }) => {
           : Language.RU,
       }}
     >
-      <IntlProvider
-        {...intlProps}
-        defaultLocale={
-          localStorage["locale"] ? localStorage["locale"] : Language.RU
-        }
-      >
-        {children}
-      </IntlProvider>
+      <IntlProvider {...intlProps}>{children}</IntlProvider>
     </Context.Provider>
   );
 };

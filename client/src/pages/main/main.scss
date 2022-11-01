@@ -3,14 +3,14 @@
   height: 100%;
   display: flex;
   flex: 1;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
 
   &-interior {
     min-height: 950px;
     background: url("../../../assets/img/interior.jpg") center center no-repeat;
     width: 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
   }
 

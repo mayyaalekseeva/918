@@ -1,5 +1,5 @@
-@use "./theme";
-@use "./theme/variables" as variables;
+@use "@app/theme/_index.scss";
+@use "@app/theme/_variables.scss" as variables;
 
 html,
 body {
@@ -18,4 +18,10 @@ body {
   flex-direction: column;
   height: 100vh;
   justify-content: center;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
 }

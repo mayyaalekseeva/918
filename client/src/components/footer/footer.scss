@@ -1,0 +1,48 @@
+@use "@app/theme/_variables.scss" as variables;
+
+.footer {
+  padding: 50px 200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: variables.$green;
+
+  &-wrp {
+    padding: 20px 0;
+    display: flex;
+  }
+
+  &-contacts {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+
+    & > span {
+      font-size: 20px;
+      line-height: 1.2;
+      color: variables.$light-text;
+      font-weight: 300;
+      letter-spacing: 0.03em;
+    }
+  }
+
+  &-hours {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+
+    & > span {
+      font-size: 20px;
+      line-height: 1.2;
+      color: variables.$light-text;
+      font-weight: 300;
+      letter-spacing: 0.03em;
+    }
+  }
+
+  &-socials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+}

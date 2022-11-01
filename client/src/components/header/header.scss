@@ -5,6 +5,9 @@
   background-color: #f6eddf;
   height: fit-content;
   box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
 
   .nav {
     grid-column: 2;

@@ -18,25 +18,18 @@
     font-size: 24px;
     text-transform: capitalize;
 
-    // &:hover {
-    //   font-weight: 550;
-    // }
-  }
-
-  &.nav-item--active {
-    .nav-item__link {
-      .nav-item__icon {
-        svg > * {
-          fill-opacity: inherit;
-          fill: variables.$green;
-        }
-      }
-
-      .nav-item__text {
-        color: variables.$green;
-      }
+    &:hover {
+      color: variables.$link-hover;
     }
   }
+
+  // &.nav-item--active {
+  //   .nav-item__link {
+  //     .nav-item__text {
+  //       color: variables.$link-hover;
+  //     }
+  //   }
+  // }
 
   &__link {
     display: inline-flex;

@@ -1,6 +1,6 @@
 import * as React from "react";
-import { IntlContext, Language, LanguageKeys } from "@app/provider";
-import LanguageSvg from "../../../assets/svg/language.svg";
+import { IntlContext, Language } from "@app/provider";
+import LanguageSvg from "@assets/svg/language.svg";
 import "./languageSelector.scss";
 import Svg from "@app/components/svg";
 
