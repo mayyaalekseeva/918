@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack serve --mode development",
-    "build": "npm-run-all --parallel compile:* & webpack --env production",
+    "build": "webpack build",
     "test": "jest --passWithNoTests",
     "compile": "formatjs compile",
     "extract": "formatjs extract",
