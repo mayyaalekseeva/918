@@ -28,11 +28,12 @@
 
   &_img {
     width: 50%;
-    background-color: green;
 
     & > img {
       width: 100%;
+      background-size: cover;
       height: 100%;
+      aspect-ratio: 4/3;
     }
   }
 }

@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Main } from "./pages";
+import { Contacts, Main, Menu, Team } from "./pages";
 import { Header } from "@app/components";
 import Footer from "@app/components/footer";
 
@@ -25,10 +25,12 @@ export const routes = getRoutes();
 const Routing: FC = () => {
   return (
     <BrowserRouter>
-      {/* <span>routing</span> */}
       <Header />
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path={routes.root} element={<Main />} />
+        <Route path={routes.menu} element={<Menu />} />
+        <Route path={routes.team} element={<Team />} />
+        <Route path={routes.contacts} element={<Contacts />} />
       </Routes>
       <Footer />
     </BrowserRouter>

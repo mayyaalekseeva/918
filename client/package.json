@@ -8,7 +8,7 @@
     "test": "jest --passWithNoTests",
     "compile": "formatjs compile",
     "extract": "formatjs extract",
-    "extract:en": "npm run extract -- 'src/**/*.ts*' --ignore='**/*.d.ts' --out-file lang/en.json --id-interpolation-pattern '[sha512:contenthash:base64:6]'",
+    "extract:en": "npm run extract -- src/**/*.ts* --ignore=**/*.d.ts --out-file lang/en.json --id-interpolation-pattern '[sha512:contenthash:base64:6]'",
     "compile:en": "npm run compile -- lang/en.json --ast --out-file compiled-lang/en.json",
     "compile:ru": "npm run compile -- lang/ru.json --ast --out-file compiled-lang/ru.json"
   },
@@ -24,6 +24,7 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-intl": "^5.25.1",
+    "react-pdf": "^5.7.2",
     "react-router-dom": "^6.3.0"
   },
   "devDependencies": {

@@ -1,4 +1,61 @@
 {
+  "chessBuildingTitle": {
+    "defaultMessage": "Something about building"
+  },
+  "chessBuildingtDesc": {
+    "defaultMessage": "Some description building Some description building Some description building Some description building Some description building Some description building"
+  },
+  "chessCoffeeDesc": {
+    "defaultMessage": "Some description coffee Some description coffee Some description coffee Some description coffee Some description coffee Some description coffee"
+  },
+  "chessCoffeeTitle": {
+    "defaultMessage": "Something about coffee"
+  },
+  "chessConceptDesc": {
+    "defaultMessage": "Some description concept Some description concept Some description concept Some description concept Some description concept Some description concept"
+  },
+  "chessConceptTitle": {
+    "defaultMessage": "Something about concept"
+  },
+  "chessCuisineDesc": {
+    "defaultMessage": "Some description cuisine Some description cuisine Some description cuisine Some description cuisine Some description cuisine Some description cuisine"
+  },
+  "chessCuisineTitle": {
+    "defaultMessage": "Something about cuisine"
+  },
+  "chessWineDesc": {
+    "defaultMessage": "Some description wine Some description wine Some description wine Some description wine Some description wine"
+  },
+  "chessWineTitle": {
+    "defaultMessage": "Something about wine"
+  },
+  "contactsAddressCity": {
+    "defaultMessage": "Nizhny Novgorod"
+  },
+  "contactsAddressStreet": {
+    "defaultMessage": "Rozhdestvenskaya, 9"
+  },
+  "contactsDays": {
+    "defaultMessage": "Mon - Sun from 8 AM till 10 PM"
+  },
+  "contactsInfoTitle": {
+    "defaultMessage": "We are glad to see you soon!"
+  },
+  "contactsWorkingHours": {
+    "defaultMessage": "Working Hours"
+  },
+  "footerAddressCity": {
+    "defaultMessage": "Nizhny Novgorod"
+  },
+  "footerAddressStreet": {
+    "defaultMessage": "Rozhdestvenskaya, 9"
+  },
+  "footerDays": {
+    "defaultMessage": "Mon - Sun from 8 AM till 10 PM"
+  },
+  "footerWorkingHours": {
+    "defaultMessage": "Working Hours"
+  },
   "navContacts": {
     "defaultMessage": "Contacts"
   },

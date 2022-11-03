@@ -6,14 +6,12 @@ import "./main.scss";
 
 const Main: React.FC = () => {
   return (
-    <>
-      <main className="main">
-        <div className="main-interior">
-          <Svg content={Logo} className="main-svg" />
-        </div>
-        <Chess />
-      </main>
-    </>
+    <main className="main">
+      <section className="main-interior">
+        <Svg content={Logo} className="main-svg" />
+      </section>
+      <Chess />
+    </main>
   );
 };
 

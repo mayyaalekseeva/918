@@ -1,4 +1,61 @@
 {
+  "chessBuildingTitle": {
+    "defaultMessage": "Здание"
+  },
+  "chessBuildingtDesc": {
+    "defaultMessage": "Some description building Some description building Some description building Some description building Some description building Some description building"
+  },
+  "chessCoffeeDesc": {
+    "defaultMessage": "Some description coffee Some description coffee Some description coffee Some description coffee Some description coffee Some description coffee"
+  },
+  "chessCoffeeTitle": {
+    "defaultMessage": "Кофе"
+  },
+  "chessConceptDesc": {
+    "defaultMessage": "Some description concept Some description concept Some description concept Some description concept Some description concept Some description concept"
+  },
+  "chessConceptTitle": {
+    "defaultMessage": "Концепция"
+  },
+  "chessCuisineDesc": {
+    "defaultMessage": "Some description cuisine Some description cuisine Some description cuisine Some description cuisine Some description cuisine Some description cuisine"
+  },
+  "chessCuisineTitle": {
+    "defaultMessage": "Кухня"
+  },
+  "chessWineDesc": {
+    "defaultMessage": "Some description wine Some description wine Some description wine Some description wine Some description wine"
+  },
+  "chessWineTitle": {
+    "defaultMessage": "Вино"
+  },
+  "contactsAddressCity": {
+    "defaultMessage": "Нижний Новгород"
+  },
+  "contactsAddressStreet": {
+    "defaultMessage": "Рождественская, 9"
+  },
+  "contactsDays": {
+    "defaultMessage": "Пн - Вс с 8.00 до 22.00"
+  },
+  "contactsInfoTitle": {
+    "defaultMessage": "Будем рады встрече с вами!"
+  },
+  "contactsWorkingHours": {
+    "defaultMessage": "Часы работы"
+  },
+  "footerAddressCity": {
+    "defaultMessage": "Нижний Новгород"
+  },
+  "footerAddressStreet": {
+    "defaultMessage": "Рождественская, 9"
+  },
+  "footerDays": {
+    "defaultMessage": "Пн - Вс с 8.00 до 22.00"
+  },
+  "footerWorkingHours": {
+    "defaultMessage": "Часы работы"
+  },
   "navContacts": {
     "defaultMessage": "Контакты"
   },
