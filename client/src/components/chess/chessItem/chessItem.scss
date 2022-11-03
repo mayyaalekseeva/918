@@ -28,13 +28,13 @@
 
   &_img {
     width: 50%;
+    aspect-ratio: 4/3;
 
-    & > img {
-      width: 100%;
-      background-size: cover;
-      height: 100%;
-      aspect-ratio: 4/3;
-    }
+    // & > img {
+    //   width: 100%;
+    //   background-size: cover;
+    //   height: 100%;
+    // }
   }
 }
 

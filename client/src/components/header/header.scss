@@ -1,10 +1,13 @@
+@use "@app/theme/_variables.scss" as variables;
+
 .header {
   width: 100%;
   display: grid;
-  grid-template-columns: 20% auto 10% 10%;
-  background-color: #f6eddf;
+  z-index: 3;
+  background-color: variables.$bcg-color;
   height: fit-content;
   box-sizing: border-box;
+  padding: 0 4em;
   position: fixed;
   top: 0;
   left: 0;
@@ -15,6 +18,6 @@
   }
 
   .language-selector {
-    grid-column: 4;
+    grid-column: 3;
   }
 }

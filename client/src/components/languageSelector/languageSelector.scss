@@ -3,6 +3,7 @@
 .language-selector {
   display: flex;
   align-items: center;
+  justify-content: end;
   position: relative;
 
   &-list {
