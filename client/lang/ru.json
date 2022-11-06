@@ -70,5 +70,17 @@
   },
   "navTeam": {
     "defaultMessage": "Команда"
+  },
+  "teamChefDescription": {
+    "defaultMessage": "Главный по тарелочкам"
+  },
+  "teamChefFullName": {
+    "defaultMessage": "Данила Алпатов"
+  },
+  "teamChefPosition": {
+    "defaultMessage": "Шеф-повар"
+  },
+  "teamTitle": {
+    "defaultMessage": "Наша команда"
   }
 }

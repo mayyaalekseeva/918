@@ -69,7 +69,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(pdf|png|jpe?g|gif)$/i,
         type: "asset/inline",
         parser: {
           dataUrlCondition: {

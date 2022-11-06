@@ -1,0 +1,16 @@
+.carousel {
+  margin: 50px 150px;
+  display: flex;
+
+  &-slide {
+    flex: 0 0 auto;
+    transition: all 0.5s ease;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .disabled {
+    display: none;
+  }
+}

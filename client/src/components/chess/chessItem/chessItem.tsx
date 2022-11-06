@@ -5,7 +5,7 @@ import "./chessItem.scss";
 interface ChessItemProps {
   title?: string;
   description?: string;
-  img: any;
+  img: ImageData;
   imageFirst?: boolean;
 }
 
@@ -15,7 +15,6 @@ const ChessItem: React.FC<ChessItemProps> = ({
   img,
   imageFirst = false,
 }) => {
-  console.log({ img });
   return (
     <div className={classNames("chess-item", imageFirst && "image-first")}>
       <div className="chess-item_about">

@@ -70,5 +70,17 @@
   },
   "navTeam": {
     "defaultMessage": "Team"
+  },
+  "teamChefDescription": {
+    "defaultMessage": "Party Maker"
+  },
+  "teamChefFullName": {
+    "defaultMessage": "Danila Alpatov"
+  },
+  "teamChefPosition": {
+    "defaultMessage": "Chef"
+  },
+  "teamTitle": {
+    "defaultMessage": "Our Team"
   }
 }
