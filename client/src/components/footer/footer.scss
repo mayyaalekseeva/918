@@ -1,7 +1,7 @@
 @use "@app/theme/_variables.scss" as variables;
 
 .footer {
-  padding: 50px 200px;
+  padding: 30px 200px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -21,7 +21,7 @@
     margin-right: 100px;
 
     & > span {
-      font-size: 20px;
+      font-size: 16px;
       line-height: 1.2;
       color: variables.$light-text;
       font-weight: 300;
@@ -34,7 +34,7 @@
     flex-direction: column;
 
     & > span {
-      font-size: 20px;
+      font-size: 16px;
       line-height: 1.2;
       color: variables.$light-text;
       font-weight: 300;
