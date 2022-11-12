@@ -1,22 +1,15 @@
 import * as React from "react";
 import Svg from "@app/components/svg";
 import Logo from "@assets/svg/logo.svg";
-import FoodMenu from "./pdf/Menu1.pdf";
-import CoffeeMenu from "./pdf/Menu2.pdf";
-import WineMenu from "./pdf/Menu3.pdf";
-import Carousel from "@app/components/carousel";
+import Pdf from "./pdf/menu.pdf";
 import PdfViewer from "@app/components/pdfViewer";
 import "./menu.scss";
 
-const pdf = [FoodMenu, CoffeeMenu, WineMenu];
-
 const Menu: React.FC = () => {
-  const [slideIndex, setSlideIndex] = React.useState<number>(0);
-
-  const menus = pdf.map((item, i) => <PdfViewer file={item} key={i} />);
+  const [slideIndex, setSlideIndex] = React.useState<number>(1);
 
   const previousMenu = () => {
-    if (slideIndex === 0) {
+    if (slideIndex === 1) {
       return;
     } else {
       setSlideIndex(slideIndex - 1);
@@ -24,7 +17,8 @@ const Menu: React.FC = () => {
   };
 
   const nextMenu = () => {
-    if (slideIndex === pdf.length - 1) {
+    console.log(Pdf.numPages);
+    if (slideIndex === Pdf.numPages - 1) {
       return;
     } else {
       setSlideIndex(slideIndex + 1);
@@ -39,7 +33,7 @@ const Menu: React.FC = () => {
       <button className="menu-btns" onClick={previousMenu}>
         {"<"}
       </button>
-      <Carousel currentSlide={slideIndex}>{menus}</Carousel>
+      <PdfViewer file={Pdf} pageNumber={slideIndex} />
       <button className="menu-btns" onClick={nextMenu}>
         {">"}
       </button>
