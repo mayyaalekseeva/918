@@ -15,7 +15,7 @@ module.exports = (env = {}) => {
     },
     devtool: "inline-source-map",
     output: {
-      path: path.join(__dirname, "dist"),
+      path: path.join(__dirname, "public"),
       filename: env.production ? "[name].[contenthash].js" : "[name].bundle.js",
       chunkFilename: env.production
         ? "[id].[contenthash].js"
