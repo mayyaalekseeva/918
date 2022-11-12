@@ -7,6 +7,17 @@ import "./menu.scss";
 
 const Menu: React.FC = () => {
   const [slideIndex, setSlideIndex] = React.useState<number>(1);
+  const [containerHeight, setContainerHeight] = React.useState<number>(0);
+  const MenuRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    const containerHeight = MenuRef.current?.clientHeight;
+
+    if (!containerHeight) {
+      return;
+    }
+    setContainerHeight(containerHeight);
+  }, []);
 
   const previousMenu = () => {
     if (slideIndex === 1) {
@@ -17,23 +28,18 @@ const Menu: React.FC = () => {
   };
 
   const nextMenu = () => {
-    console.log(Pdf.numPages);
-    if (slideIndex === Pdf.numPages - 1) {
-      return;
-    } else {
-      setSlideIndex(slideIndex + 1);
-    }
+    setSlideIndex(slideIndex + 1);
   };
 
   return (
-    <section className="menu">
+    <section className="menu" ref={MenuRef}>
       <Svg content={Logo} className="menu-svg" />
       <div className="menu-bcg" />
 
       <button className="menu-btns" onClick={previousMenu}>
         {"<"}
       </button>
-      <PdfViewer file={Pdf} pageNumber={slideIndex} />
+      <PdfViewer file={Pdf} pageNumber={slideIndex} height={containerHeight} />
       <button className="menu-btns" onClick={nextMenu}>
         {">"}
       </button>
