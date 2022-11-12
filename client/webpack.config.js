@@ -20,6 +20,7 @@ module.exports = (env = {}) => {
       chunkFilename: env.production
         ? "[id].[contenthash].js"
         : "[id].bundle.js",
+      publicPath: "/",
     },
     target: "web",
     module: {
