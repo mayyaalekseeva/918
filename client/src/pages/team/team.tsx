@@ -1,7 +1,7 @@
 import { TeamMember } from "@app/components";
 import * as React from "react";
 import { defineMessages, useIntl } from "react-intl";
-import Chef from "@assets/img/Chef.jpg";
+import Chef from "@assets/img/chef.jpg";
 import "./team.scss";
 
 const messages = defineMessages({
