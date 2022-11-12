@@ -2,9 +2,6 @@ import * as React from "react";
 import { Document, Page, pdfjs, PDFPageItem } from "react-pdf";
 import "./pdfViewer.scss";
 
-type onDocumentLoadSuccess = (pdf: pdfjs.PDFDocumentProxy) => Promise<void>;
-type onPageLoadSuccess = (pdf: pdfjs.PDFPageProxy) => Promise<void>;
-
 interface Props {
   file: PDFPageItem;
 }
@@ -16,37 +13,6 @@ const PdfViewer: React.FC<Props> = ({ file }) => {
   const [pdfWidth, setPdfWidth] = React.useState<number>();
   const [error, setError] = React.useState<boolean>(false);
   const [numPages, setNumPages] = React.useState<number | null>(null);
-
-  //   React.useEffect(() => {
-  //     setError(false);
-  //   }, [url]);
-
-  //   const file = React.useMemo(
-  //     () => ({
-  //       url,
-  //     }),
-  //     [url]
-  //   );
-
-  //   const onDocumentLoadSuccess: onDocumentLoadSuccess = async ({
-  //     numPages: nextNumPages,
-  //   }) => {
-  //     setError(false);
-  //     setNumPages(nextNumPages);
-  //   };
-
-  //   const onPageLoadSuccess: onPageLoadSuccess = async (page) => {
-  //     const containerWidth = refPdfContainer.current?.clientWidth;
-
-  //     if (!containerWidth) {
-  //       return;
-  //     }
-  //     setPdfWidth(containerWidth);
-  //   };
-
-  //   const onError = () => {
-  //     setError(true);
-  //   };
 
   return (
     <section className="pdf-container" ref={refPdfContainer}>

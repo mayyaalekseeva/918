@@ -8,6 +8,7 @@ interface Props {
 }
 
 const Carousel: React.FC<Props> = ({ children, currentSlide = 0 }) => {
+    
   const activeSlide = children.map((slide, i) => (
     <div
       className={classNames("carousel-slide", currentSlide !== i && "disabled")}
