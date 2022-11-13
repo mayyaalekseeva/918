@@ -6,7 +6,7 @@
   display: grid;
   z-index: 5;
   background-color: variables.$bcg-color;
-  height: fit-content;
+
   box-sizing: border-box;
   padding: 0 4em;
   position: fixed;
@@ -26,7 +26,10 @@
     grid-column: 2;
 
     @include mixins.mobile {
-      display: none;
+      position: fixed;
+      top: 75px;
+      left: 0;
+      grid-column: unset;
     }
   }
 

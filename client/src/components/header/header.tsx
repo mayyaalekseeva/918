@@ -5,10 +5,20 @@ import "./header.scss";
 import BurgerMenu from "../burgerMenu";
 
 const Header: React.FC = () => {
+  const [isMenuActive, setMenuActive] = React.useState(false);
+
+  const handleBurger = () => {
+    setMenuActive(!isMenuActive);
+    const body = document.body.classList;
+    body.toggle("overflow");
+  };
+
   return (
     <header className="header">
-      <BurgerMenu />
-      <Nav />
+      <div onClick={handleBurger}>
+        <BurgerMenu />
+      </div>
+      <Nav isMenuActive={isMenuActive} handleMenu={handleBurger} />
       <LanguageSelector />
     </header>
   );

@@ -36,11 +36,8 @@
     cursor: pointer;
 
     & > svg {
-      min-width: 32px;
-      min-height: 32px;
-    }
-
-    @include mixins.mobile {
+      width: 32px;
+      height: 32px;
     }
   }
 

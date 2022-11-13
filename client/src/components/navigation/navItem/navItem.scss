@@ -1,4 +1,5 @@
 @use "@app/theme/variables" as variables;
+@use "@app/theme/mixins" as mixins;
 
 .nav-item {
   width: 100%;
@@ -8,6 +9,12 @@
   list-style: none;
   cursor: pointer;
   border: 1px solid transparent;
+  margin: 0 10px;
+  justify-content: center;
+
+  @include mixins.mobile {
+    margin: 20px 0;
+  }
 
   &__text {
     color: variables.$green;
@@ -21,28 +28,18 @@
     &:hover {
       color: variables.$link-hover;
     }
-  }
 
-  // &.nav-item--active {
-  //   .nav-item__link {
-  //     .nav-item__text {
-  //       color: variables.$link-hover;
-  //     }
-  //   }
-  // }
+    @include mixins.mobile {
+      font-weight: 400;
+      font-size: 35px;
+      line-height: 45px;
+      text-align: center;
+      color: variables.$bcg-color;
+    }
+  }
 
   &__link {
     display: inline-flex;
     text-decoration: none;
-
-    .nav-item__icon {
-      height: 24px;
-      width: 24px;
-      margin-right: 25px;
-
-      svg {
-        display: flex;
-      }
-    }
   }
 }

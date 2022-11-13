@@ -43,18 +43,18 @@
       @include mixins.transition;
     }
 
-    &.burger__active:before {
+    &.burger--active:before {
       opacity: 0;
     }
 
-    &.burger__active:after {
+    &.burger--active:after {
       bottom: 17px;
       left: 1px;
       right: 7px;
       transform: rotate(45deg);
     }
 
-    &.burger__active > span {
+    &.burger--active > span {
       left: 0px;
       right: 8px;
       top: 18px;

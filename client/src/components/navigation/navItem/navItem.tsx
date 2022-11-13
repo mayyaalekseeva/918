@@ -29,11 +29,7 @@ const NavItem: FC<NavItemProps> = ({
       {...props}
     >
       <Link className="nav-item__link" to={to}>
-        <>
-          <span className="nav-item__icon">{icon}</span>
-
-          <span className="nav-item__text">{children}</span>
-        </>
+        <span className="nav-item__text">{children}</span>
       </Link>
     </li>
   );

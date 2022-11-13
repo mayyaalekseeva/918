@@ -19,7 +19,7 @@ const BurgerMenu: React.FC = () => {
       <a
         href="#"
         className={classNames("burger__btn", {
-          burger__active: isBurgerActive,
+          "burger--active": isBurgerActive,
         })}
       >
         <span></span>

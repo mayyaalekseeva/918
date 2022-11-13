@@ -4,6 +4,7 @@ import "./nav.scss";
 import NavItem from "./navItem";
 import { defineMessages, useIntl } from "react-intl";
 import classNames from "classnames";
+import useOuterClick from "@app/hooks";
 
 const messages = defineMessages({
   navMain: {
@@ -28,27 +29,45 @@ const messages = defineMessages({
   },
 });
 
-const Nav: React.FC = () => {
+interface Props {
+  isMenuActive: boolean;
+  handleMenu: any;
+}
+
+const Nav: React.FC<Props> = ({ isMenuActive, handleMenu }) => {
   const intl = useIntl();
 
   return (
-    <nav className="nav">
+    <nav className={classNames("nav", { nav__active: isMenuActive })}>
       <ul className={classNames("nav__content")}>
-        <NavItem title={intl.formatMessage(messages.navMain)} to={routes.root}>
+        <NavItem
+          title={intl.formatMessage(messages.navMain)}
+          to={routes.root}
+          onClick={handleMenu}
+        >
           {intl.formatMessage(messages.navMain)}
         </NavItem>
 
-        <NavItem title={intl.formatMessage(messages.navMenu)} to={routes.menu}>
+        <NavItem
+          title={intl.formatMessage(messages.navMenu)}
+          to={routes.menu}
+          onClick={handleMenu}
+        >
           {intl.formatMessage(messages.navMenu)}
         </NavItem>
 
-        <NavItem title={intl.formatMessage(messages.navTeam)} to={routes.team}>
+        <NavItem
+          title={intl.formatMessage(messages.navTeam)}
+          to={routes.team}
+          onClick={handleMenu}
+        >
           {intl.formatMessage(messages.navTeam)}
         </NavItem>
 
         <NavItem
           title={intl.formatMessage(messages.navReserve)}
           to={routes.reserve}
+          onClick={handleMenu}
         >
           {intl.formatMessage(messages.navReserve)}
         </NavItem>
@@ -56,6 +75,7 @@ const Nav: React.FC = () => {
         <NavItem
           title={intl.formatMessage(messages.navContacts)}
           to={routes.contacts}
+          onClick={handleMenu}
         >
           {intl.formatMessage(messages.navContacts)}
         </NavItem>

@@ -28,6 +28,11 @@
     @include mixins.mobile {
       text-align: center;
       padding-top: 50px;
+
+      & > svg {
+        height: 250px;
+        width: 250px;
+      }
     }
   }
 }
