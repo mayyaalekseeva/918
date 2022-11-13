@@ -1,0 +1,64 @@
+@use "@app/theme/_variables.scss" as variables;
+@use "@app/theme/_mixins.scss" as mixins;
+
+.burger {
+  display: flex;
+  margin: 20px;
+
+  @include mixins.tablet {
+    display: flex;
+  }
+
+  &__btn {
+    position: relative;
+    padding: 18px;
+    // border: 1px solid variables.$green;
+    // border-radius: 50%;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 1px;
+      right: 1px;
+      height: 2px;
+      background: variables.$green;
+      @include mixins.transition;
+    }
+
+    &:after {
+      top: auto;
+      bottom: 6px;
+    }
+
+    & > span {
+      position: absolute;
+      top: 50%;
+      left: 8px;
+      right: 8px;
+      height: 2px;
+      background: variables.$green;
+      margin-top: -1px;
+      @include mixins.transition;
+    }
+
+    &.burger__active:before {
+      opacity: 0;
+    }
+
+    &.burger__active:after {
+      bottom: 17px;
+      left: 1px;
+      right: 7px;
+      transform: rotate(45deg);
+    }
+
+    &.burger__active > span {
+      left: 0px;
+      right: 8px;
+      top: 18px;
+      transform: rotate(-45deg);
+    }
+  }
+}

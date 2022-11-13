@@ -24,7 +24,10 @@ const ChessItem: React.FC<ChessItemProps> = ({
 
       <div
         className="chess-item_img"
-        style={{ background: `url(${img}) no-repeat center top` }}
+        style={{
+          background: `url(${img}) no-repeat center top`,
+          backgroundSize: "cover",
+        }}
       ></div>
     </div>
   );

@@ -1,8 +1,13 @@
 @use "@app/theme/_variables.scss" as variables;
+@use "@app/theme/_mixins.scss" as mixins;
 
 .chess-item {
   display: flex;
   width: 100%;
+
+  @include mixins.mobile {
+    flex-direction: column;
+  }
 
   &_about {
     display: flex;
@@ -10,6 +15,12 @@
     justify-content: center;
     padding: 150px 50px;
     width: 50%;
+
+    @include mixins.mobile {
+      padding: 0px 30px 40px;
+      width: 100%;
+      align-items: center;
+    }
 
     &__title {
       font-size: 40px;
@@ -23,6 +34,10 @@
       font-weight: 400;
       line-height: 1.2;
       color: variables.$green;
+
+      @include mixins.mobile {
+        text-align: center;
+      }
     }
   }
 
@@ -30,14 +45,17 @@
     width: 50%;
     aspect-ratio: 4/3;
 
-    // & > img {
-    //   width: 100%;
-    //   background-size: cover;
-    //   height: 100%;
-    // }
+    @include mixins.mobile {
+      width: 100%;
+      background-size: cover;
+    }
   }
 }
 
 .image-first {
   flex-direction: row-reverse;
+
+  @include mixins.mobile {
+    flex-direction: column;
+  }
 }

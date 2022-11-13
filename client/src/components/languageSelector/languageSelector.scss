@@ -1,4 +1,5 @@
 @use "@app/theme/_variables.scss" as variables;
+@use "@app/theme/_mixins.scss" as mixins;
 
 .language-selector {
   display: flex;
@@ -33,6 +34,14 @@
     display: flex;
     justify-content: end;
     cursor: pointer;
+
+    & > svg {
+      min-width: 32px;
+      min-height: 32px;
+    }
+
+    @include mixins.mobile {
+    }
   }
 
   button {

@@ -3,6 +3,7 @@ import { routes } from "@app/routing";
 import "./nav.scss";
 import NavItem from "./navItem";
 import { defineMessages, useIntl } from "react-intl";
+import classNames from "classnames";
 
 const messages = defineMessages({
   navMain: {
@@ -32,7 +33,7 @@ const Nav: React.FC = () => {
 
   return (
     <nav className="nav">
-      <ul className="nav__content">
+      <ul className={classNames("nav__content")}>
         <NavItem title={intl.formatMessage(messages.navMain)} to={routes.root}>
           {intl.formatMessage(messages.navMain)}
         </NavItem>

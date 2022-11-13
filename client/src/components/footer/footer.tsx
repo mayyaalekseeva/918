@@ -36,8 +36,10 @@ const Footer: React.FC = () => {
     <footer className="footer">
       <div className="footer-wrp">
         <div className="footer-contacts">
-          <span>{intl.formatMessage(messages.footerAddressCity)}</span>
-          <span>{intl.formatMessage(messages.footerAddressStreet)}</span>
+          <span>
+            {intl.formatMessage(messages.footerAddressCity)},{" "}
+            {intl.formatMessage(messages.footerAddressStreet)}
+          </span>
           <span>{contactNumber}</span>
         </div>
         <div className="footer-hours">
