@@ -11,11 +11,17 @@ interface Props {
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const PdfViewer: React.FC<Props> = ({ file, pageNumber = 1, height }) => {
+  const [numPages, setNumPages] = React.useState<number>(3);
+
   const onDocumentLoadSuccess = ({ numPages }: any) => {
-    console.log(numPages);
-    if (pageNumber >= numPages) {
-      console.log(numPages);
-      pageNumber = numPages;
+    setNumPages(numPages);
+  };
+
+  const handlePageNumber = () => {
+    if (pageNumber > numPages) {
+      return numPages;
+    } else {
+      return pageNumber;
     }
   };
 
@@ -32,7 +38,7 @@ const PdfViewer: React.FC<Props> = ({ file, pageNumber = 1, height }) => {
           renderTextLayer
           renderAnnotationLayer
           height={height}
-          pageNumber={pageNumber}
+          pageNumber={handlePageNumber()}
           onLoadError={console.error}
         />
       </Document>

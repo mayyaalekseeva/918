@@ -12,12 +12,12 @@
   margin: 0 10px;
   justify-content: center;
 
-  @include mixins.mobile {
+  @include mixins.tablet {
     margin: 20px 0;
   }
 
   &__text {
-    color: variables.$green;
+    color: variables.$background;
     line-height: 30px;
     font-style: normal;
     letter-spacing: 0.001em;
@@ -29,12 +29,12 @@
       color: variables.$link-hover;
     }
 
-    @include mixins.mobile {
+    @include mixins.tablet {
       font-weight: 400;
       font-size: 35px;
       line-height: 45px;
       text-align: center;
-      color: variables.$bcg-color;
+      color: variables.$background-light;
     }
   }
 

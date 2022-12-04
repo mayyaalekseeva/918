@@ -3,28 +3,28 @@
     "defaultMessage": "Здание"
   },
   "chessBuildingtDesc": {
-    "defaultMessage": "Some description building Some description building Some description building Some description building Some description building Some description building"
+    "defaultMessage": "Историческое здание 1917 года, которое изначально было полицейским участком, а затем отдано под квартиры. Мы сохранили и отреставрировали исторический облик фасада, потолка и стен, чтобы сохранить антуражность и оригинальность интерьера."
   },
   "chessCoffeeDesc": {
-    "defaultMessage": "Some description coffee Some description coffee Some description coffee Some description coffee Some description coffee Some description coffee"
+    "defaultMessage": "По-настоящему утро начинается лишь тогда, когда мы завариваем первую чашку кофе. В бистро мы готовим кофе спешалти уровня - сами выбираем лоты зерна и профиль обжарки, варим на La Marzocco. Наша задача - сделать ваше утро идеальным, за вами лишь выбор напитка: сбалансированная классика или десертные позиции послаще, а чтобы раскрыть вкус и терруар зерна берите чёрный, приготовим его для вас любым альтернативным способом."
   },
   "chessCoffeeTitle": {
     "defaultMessage": "Кофе"
   },
   "chessConceptDesc": {
-    "defaultMessage": "Some description concept Some description concept Some description concept Some description concept Some description concept Some description concept"
+    "defaultMessage": "9/18 - бистро с завтраками, спешалти кофе и авторской винной картой. Благодаря открытой кухне и бару вы можете наблюдать за приготовлением блюд и напитков - это не только завораживающий процесс, но и возможность узнать о терруарных особенностях продуктов и тонкостях приготовления."
   },
   "chessConceptTitle": {
     "defaultMessage": "Концепция"
   },
   "chessCuisineDesc": {
-    "defaultMessage": "Some description cuisine Some description cuisine Some description cuisine Some description cuisine Some description cuisine Some description cuisine"
+    "defaultMessage": "Регулярно мы придумываем уникальное сезонное меню, в котором сочетаем понятные и простые ингредиенты с необычными редкими находками, сохраняем баланс интересных вкусовых сочетаний и разных текстур, чтобы создать полное гастрономическое впечатление. Мы не боимся экспериментировать и удивлять гостей. Кстати, некоторые завтраки уже стали легендарными!"
   },
   "chessCuisineTitle": {
     "defaultMessage": "Кухня"
   },
   "chessWineDesc": {
-    "defaultMessage": "Some description wine Some description wine Some description wine Some description wine Some description wine"
+    "defaultMessage": "Мы любим вино и считаем, что оно отлично вписывается в культуру завтраков. Для вас мы выбрали как классические и всеми любимые вина, так и более редкие коллекционные бутылки. Советуем рассказать официантам о своих предпочтениях, чтобы ребята подобрали бокал специально для вас."
   },
   "chessWineTitle": {
     "defaultMessage": "Вино"

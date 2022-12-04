@@ -19,24 +19,28 @@
     @include mixins.mobile {
       padding: 0px 30px 40px;
       width: 100%;
-      align-items: center;
     }
 
     &__title {
       font-size: 40px;
       line-height: 1.2;
       font-weight: 400;
-      color: variables.$green;
+      color: variables.$background;
+
+      @include mixins.mobile {
+        font-size: 28px;
+      }
     }
 
     &__desc {
       font-size: 27px;
       font-weight: 400;
       line-height: 1.2;
-      color: variables.$green;
+      letter-spacing: 0.05px;
+      color: variables.$background;
 
       @include mixins.mobile {
-        text-align: center;
+        font-size: 15px;
       }
     }
   }

@@ -5,8 +5,7 @@
   width: 100%;
   display: grid;
   z-index: 5;
-  background-color: variables.$bcg-color;
-
+  background-color: variables.$background-light;
   box-sizing: border-box;
   padding: 0 4em;
   position: fixed;
@@ -14,7 +13,7 @@
   left: 0;
   filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.15));
 
-  @include mixins.mobile {
+  @include mixins.tablet {
     padding: 0 16px;
   }
 
@@ -25,7 +24,7 @@
   .nav {
     grid-column: 2;
 
-    @include mixins.mobile {
+    @include mixins.tablet {
       position: fixed;
       top: 75px;
       left: 0;
@@ -36,7 +35,7 @@
   .language-selector {
     grid-column: 3;
 
-    @include mixins.mobile {
+    @include mixins.tablet {
       grid-column: 2;
     }
   }

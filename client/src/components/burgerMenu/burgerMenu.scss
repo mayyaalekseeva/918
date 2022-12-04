@@ -10,10 +10,13 @@
   }
 
   &__btn {
+    display: none;
     position: relative;
     padding: 18px;
-    // border: 1px solid variables.$green;
-    // border-radius: 50%;
+
+    @include mixins.tablet {
+      display: flex;
+    }
 
     &:before,
     &:after {
@@ -23,7 +26,7 @@
       left: 1px;
       right: 1px;
       height: 2px;
-      background: variables.$green;
+      background: variables.$background;
       @include mixins.transition;
     }
 
@@ -38,7 +41,7 @@
       left: 8px;
       right: 8px;
       height: 2px;
-      background: variables.$green;
+      background: variables.$background;
       margin-top: -1px;
       @include mixins.transition;
     }

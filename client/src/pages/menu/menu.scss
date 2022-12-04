@@ -9,6 +9,7 @@
   flex: 1;
   background-color: rgba(0, 0, 0, 0.74);
   position: relative;
+  align-items: center;
 
   &-bcg {
     height: 100%;
@@ -20,28 +21,24 @@
     position: absolute;
   }
 
-  &-svg {
-    position: absolute;
-    top: 40px;
-    left: 50px;
-
-    & > svg {
-      color: white;
-      opacity: 100%;
-    }
-  }
-
   &-btns {
     cursor: pointer;
-    z-index: 5;
-    background-color: transparent;
-    border: none;
-    outline: none;
+    z-index: 4;
     color: variables.$light-text;
-    min-height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
     font-size: 40px;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-      "Lucida Sans", Arial, sans-serif;
+  }
+
+  .left {
+    border-bottom: 3px solid variables.$light-text;
+    border-left: 3px solid variables.$light-text;
+    transform: rotate(45deg);
+  }
+
+  .right {
+    border-bottom: 3px solid variables.$light-text;
+    border-right: 3px solid variables.$light-text;
+    transform: rotate(-45deg);
   }
 }
