@@ -48,10 +48,10 @@ const Footer: React.FC = () => {
         </div>
       </div>
       <div className="footer-socials">
-        <a href="#">
+        <a href="https://vk.com/bistro918" target="_blank">
           <Svg content={Vk} />
         </a>
-        <a href="#">
+        <a href="https://instagram.com/9.18bistro" target="_blank">
           <Svg content={Insta} />
         </a>
         <a href="#">

@@ -2,7 +2,7 @@ import * as React from "react";
 import { defineMessages, useIntl } from "react-intl";
 import Concept from "@assets/img/concept.jpg";
 import Building from "@assets/img/building.jpg";
-import Cuisine from "@assets/img/macmuffin.jpg";
+import Cuisine from "@assets/img/cuisine.jpg";
 import Coffee from "@assets/img/coffee.jpg";
 import Wine from "@assets/img/wine.jpg";
 import ChessItem from "./chessItem";
