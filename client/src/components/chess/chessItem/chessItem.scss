@@ -47,11 +47,15 @@
 
   &_img {
     width: 50%;
-    aspect-ratio: 4/3;
+    aspect-ratio: 1/1;
+    background-position-x: center;
+    background-position-y: top;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     @include mixins.mobile {
       width: 100%;
-      background-size: cover;
+      background-position-y: center;
     }
   }
 }
