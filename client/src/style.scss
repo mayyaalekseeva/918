@@ -21,7 +21,7 @@ body {
   width: 100%;
   justify-content: center;
   position: relative;
-  padding: 80px 0 163px;
+  padding: 80px 0 144px;
 
   @include mixins.mobile {
     padding: 76px 0 237px;
@@ -39,5 +39,7 @@ section {
 }
 
 .overflow {
-  overflow: hidden;
+  @include mixins.tablet {
+    overflow: hidden;
+  }
 }

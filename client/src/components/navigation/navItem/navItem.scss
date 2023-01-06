@@ -17,7 +17,7 @@
   }
 
   &__text {
-    color: variables.$background;
+    color: variables.$text;
     line-height: 30px;
     font-style: normal;
     letter-spacing: 0.001em;
@@ -34,7 +34,7 @@
       font-size: 35px;
       line-height: 45px;
       text-align: center;
-      color: variables.$background-light;
+      color: variables.$light-text;
     }
   }
 

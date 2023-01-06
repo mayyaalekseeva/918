@@ -4,7 +4,6 @@ import "./nav.scss";
 import NavItem from "./navItem";
 import { defineMessages, useIntl } from "react-intl";
 import classNames from "classnames";
-import useOuterClick from "@app/hooks";
 
 const messages = defineMessages({
   navMain: {
@@ -64,13 +63,13 @@ const Nav: React.FC<Props> = ({ isMenuActive, handleMenu }) => {
           {intl.formatMessage(messages.navTeam)}
         </NavItem>
 
-        <NavItem
+        {/* <NavItem
           title={intl.formatMessage(messages.navReserve)}
           to={routes.reserve}
           onClick={handleMenu}
         >
           {intl.formatMessage(messages.navReserve)}
-        </NavItem>
+        </NavItem> */}
 
         <NavItem
           title={intl.formatMessage(messages.navContacts)}

@@ -2,24 +2,17 @@ import classNames from "classnames";
 import * as React from "react";
 import "./burgerMenu.scss";
 
-const BurgerMenu: React.FC = () => {
-  const [isBurgerActive, setBurgerActive] = React.useState<boolean>(false);
+interface BurgerProps {
+  isMenuActive: boolean;
+  setMenuActive: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
-  React.useEffect(() => {
-    setBurgerActive(false);
-  }, []);
-
-  const handleBurgerClick = () => {
-    setBurgerActive(!isBurgerActive);
-    console.log(isBurgerActive);
-  };
-
+const BurgerMenu: React.FC<BurgerProps> = ({ isMenuActive, setMenuActive }) => {
   return (
-    <div className="burger" onClick={handleBurgerClick}>
+    <div className="burger" onClick={() => setMenuActive(!isMenuActive)}>
       <a
-        href="#"
         className={classNames("burger__btn", {
-          "burger--active": isBurgerActive,
+          "burger--active": isMenuActive,
         })}
       >
         <span></span>

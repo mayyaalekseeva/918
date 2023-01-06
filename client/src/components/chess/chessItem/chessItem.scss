@@ -25,7 +25,7 @@
       font-size: 40px;
       line-height: 1.2;
       font-weight: 400;
-      color: variables.$background;
+      color: variables.$text;
 
       @include mixins.mobile {
         font-size: 28px;
@@ -37,7 +37,7 @@
       font-weight: 400;
       line-height: 1.2;
       letter-spacing: 0.05px;
-      color: variables.$background;
+      color: variables.$text;
 
       @include mixins.mobile {
         font-size: 15px;

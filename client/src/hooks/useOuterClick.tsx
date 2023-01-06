@@ -1,39 +1,25 @@
-import * as React from "react";
+import React from "react";
 
-interface Props {
-  callback: any;
-}
+const useOuterClick = (initialIsVisible: boolean) => {
+  const [isComponentVisible, setIsComponentVisible] =
+    React.useState(initialIsVisible);
+  const ref = React.useRef<HTMLDivElement>(null);
 
-const useOuterClick = ({ callback }: Props) => {
-  let callbackRef: any = React.useRef(null);
-  const innerRef = React.useRef<any>(null);
-
-  React.useEffect(() => {
-    callbackRef.current = callback;
-  });
-
-  React.useEffect(() => {
-    const handleClick = (e: any) => {
-      if (e.target) {
-        if (
-          innerRef.current &&
-          callbackRef.current &&
-          !innerRef.current.contains(e.target)
-        ) {
-          callbackRef.current(e);
-        }
-      }
-    };
-
-    document.addEventListener("click", handleClick);
-    return () => document.removeEventListener("click", handleClick);
-  }, []);
-
-  const controller = {
-    innerRef,
+  const handleClickOutside = (event: MouseEvent) => {
+    if (ref.current && !ref.current.contains(event.target as HTMLElement)) {
+      setIsComponentVisible(false);
+    }
   };
 
-  return controller;
+  React.useEffect(() => {
+    document.addEventListener("click", handleClickOutside, true);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside, true);
+    };
+  }, []);
+
+  return { ref, isComponentVisible, setIsComponentVisible };
 };
 
 export default useOuterClick;

@@ -1,22 +1,26 @@
 import * as React from "react";
 import { IntlContext, Language } from "@app/provider";
 import LanguageSvg from "@assets/svg/language.svg";
-import "./languageSelector.scss";
 import Svg from "@app/components/svg";
+import { useOuterClick } from "@app/hooks";
+
+import "./languageSelector.scss";
 
 const LanguageSelector: React.FC = () => {
   const { changeLanguage } = React.useContext(IntlContext);
-  const [isOpen, setIsOpen] = React.useState(false);
+
+  const { ref, isComponentVisible, setIsComponentVisible } =
+    useOuterClick(false);
 
   const switchLanguage = (code: Language) => {
     changeLanguage(code);
     localStorage.setItem("locale", code);
-    setIsOpen(false);
+    setIsComponentVisible(false);
   };
 
   const toggleSelector = () => {
-    setIsOpen(!isOpen);
-    console.log({ isOpen });
+    setIsComponentVisible(!isComponentVisible);
+    console.log({ isComponentVisible });
   };
 
   const selector: React.ReactElement = (
@@ -37,9 +41,8 @@ const LanguageSelector: React.FC = () => {
   );
 
   return (
-    <div className="language-selector">
-      {!isOpen && languageSvg}
-      {isOpen && selector}
+    <div className="language-selector" ref={ref}>
+      {isComponentVisible ? selector : languageSvg}
     </div>
   );
 };

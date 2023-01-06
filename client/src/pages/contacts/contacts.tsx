@@ -34,8 +34,7 @@ const Contacts: React.FC = () => {
       <div className="contacts-map">
         <div className="contacts-map_wrp">
           <iframe
-            src="https://yandex.ru/map-widget/v1/-/CCU6qLQGTD"
-            frameBorder="1"
+            src="https://yandex.ru/map-widget/v1/-/CCUvAEQWSC"
             allowFullScreen
             className="contacts-map__iframe"
           ></iframe>

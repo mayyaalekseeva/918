@@ -1,6 +1,13 @@
+@use "@app/theme/_mixins.scss" as mixins;
+
 .carousel {
   margin: 50px 150px;
   display: flex;
+
+  @include mixins.mobile {
+    margin: 0;
+    flex-direction: column;
+  }
 
   &-slide {
     flex: 0 0 auto;
@@ -8,9 +15,23 @@
     width: 100%;
     display: flex;
     justify-content: center;
+
+    & > img {
+      max-width: 500px;
+      z-index: 4;
+
+      @include mixins.mobile {
+        max-width: unset;
+        width: 100%;
+      }
+    }
   }
 
   .disabled {
     display: none;
+
+    @include mixins.mobile {
+      display: flex;
+    }
   }
 }

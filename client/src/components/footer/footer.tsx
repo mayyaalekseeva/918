@@ -2,8 +2,6 @@ import * as React from "react";
 import Svg from "@app/components/svg";
 import Vk from "@assets/svg/vk.svg";
 import Insta from "@assets/svg/instagram.svg";
-import Mail from "@assets/svg/mail.svg";
-import Tg from "@assets/svg/telegram.svg";
 
 import "./footer.scss";
 import { defineMessages, useIntl } from "react-intl";
@@ -30,7 +28,7 @@ const messages = defineMessages({
 const Footer: React.FC = () => {
   const intl = useIntl();
 
-  const contactNumber: string = "+7 (831) 222-22-22";
+  const contactNumber: string = "+7 (986) 769-00-99";
 
   return (
     <footer className="footer">
@@ -53,12 +51,6 @@ const Footer: React.FC = () => {
         </a>
         <a href="https://instagram.com/9.18bistro" target="_blank">
           <Svg content={Insta} />
-        </a>
-        <a href="#">
-          <Svg content={Mail} />
-        </a>
-        <a href="#">
-          <Svg content={Tg} />
         </a>
       </div>
     </footer>
