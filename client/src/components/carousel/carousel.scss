@@ -4,7 +4,7 @@
   margin: 50px 150px;
   display: flex;
 
-  @include mixins.mobile {
+  @include mixins.tablet {
     margin: 0;
     flex-direction: column;
   }
@@ -20,7 +20,7 @@
       max-width: 500px;
       z-index: 4;
 
-      @include mixins.mobile {
+      @include mixins.tablet {
         max-width: unset;
         width: 100%;
       }
@@ -30,7 +30,7 @@
   .disabled {
     display: none;
 
-    @include mixins.mobile {
+    @include mixins.tablet {
       display: flex;
     }
   }

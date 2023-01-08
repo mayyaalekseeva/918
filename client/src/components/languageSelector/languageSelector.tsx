@@ -35,7 +35,7 @@ const LanguageSelector: React.FC = () => {
   );
 
   const languageSvg: React.ReactElement = (
-    <button onClick={toggleSelector}>
+    <button aria-label="language-selector" onClick={toggleSelector}>
       <Svg content={LanguageSvg} className="language-selector-svg" />
     </button>
   );

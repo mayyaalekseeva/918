@@ -21,7 +21,7 @@
     opacity: 30%;
     position: absolute;
 
-    @include mixins.mobile {
+    @include mixins.tablet {
       display: none;
     }
   }
@@ -34,7 +34,7 @@
     width: 30px;
     font-size: 40px;
 
-    @include mixins.mobile {
+    @include mixins.tablet {
       display: none;
     }
   }
