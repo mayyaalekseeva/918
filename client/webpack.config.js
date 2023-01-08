@@ -78,7 +78,7 @@ module.exports = (env = {}) => {
         },
         {
           test: /\.(pdf|png|jpe?g|gif)$/i,
-          type: "asset/inline",
+          type: "asset/resource",
           parser: {
             dataUrlCondition: {
               maxSize: 1 * 1024 * 1024, // 1mb

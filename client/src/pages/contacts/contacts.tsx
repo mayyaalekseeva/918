@@ -27,7 +27,7 @@ const messages = defineMessages({
 
 const Contacts: React.FC = () => {
   const intl = useIntl();
-  const contactNumber: string = "+7 (831) 222-22-22";
+  const contactNumber: string = "+7 (986) 769-00-99";
 
   return (
     <section className="contacts">
