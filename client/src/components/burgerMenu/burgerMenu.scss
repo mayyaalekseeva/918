@@ -3,11 +3,7 @@
 
 .burger {
   display: flex;
-  margin: 20px;
-
-  @include mixins.tablet {
-    display: flex;
-  }
+  margin: 22px;
 
   &__btn {
     display: none;
