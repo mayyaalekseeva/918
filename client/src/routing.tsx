@@ -29,7 +29,7 @@ const Routing: FC = () => {
       <Routes>
         <Route path={routes.root} element={<Main />} />
         <Route path={routes.menu} element={<Menu />} />
-        <Route path={routes.team} element={<Team />} />
+        {/* <Route path={routes.team} element={<Team />} /> */}
         <Route path={routes.contacts} element={<Contacts />} />
       </Routes>
       <Footer />

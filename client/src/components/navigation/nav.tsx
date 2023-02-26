@@ -55,13 +55,13 @@ const Nav: React.FC<Props> = ({ isMenuActive, handleMenu }) => {
           {intl.formatMessage(messages.navMenu)}
         </NavItem>
 
-        <NavItem
+        {/* <NavItem
           title={intl.formatMessage(messages.navTeam)}
           to={routes.team}
           onClick={handleMenu}
         >
           {intl.formatMessage(messages.navTeam)}
-        </NavItem>
+        </NavItem> */}
 
         {/* <NavItem
           title={intl.formatMessage(messages.navReserve)}
