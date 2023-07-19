@@ -59,7 +59,9 @@ const IntlWrapper: React.FC<React.PropsWithChildren> = ({ children }) => {
           : Language.RU,
       }}
     >
-      <IntlProvider {...intlProps}>{children}</IntlProvider>
+      <IntlProvider {...intlProps} defaultLocale={Language.RU}>
+        {children}
+      </IntlProvider>
     </Context.Provider>
   );
 };
