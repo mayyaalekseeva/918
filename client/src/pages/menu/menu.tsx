@@ -3,13 +3,13 @@ import { Carousel } from "@app/components";
 import Menu1 from "@assets/img/menu-1.jpg";
 import Menu2 from "@assets/img/menu-2.jpg";
 import Menu3 from "@assets/img/menu-3.jpg";
-import Menu4 from "@assets/img/menu-4.jpg";
-import Menu5 from "@assets/img/menu-5.jpg";
-import Menu6 from "@assets/img/menu-6.jpg";
-import Menu7 from "@assets/img/menu-7.jpg";
-import Menu8 from "@assets/img/menu-8.jpg";
-import Menu9 from "@assets/img/menu-9.jpg";
-import Menu10 from "@assets/img/menu-10.jpg";
+import Menu4 from "@assets/img/coffee-1.jpg";
+import Menu5 from "@assets/img/coffee-2.jpg";
+import Menu6 from "@assets/img/coffee-3.jpg";
+import Menu7 from "@assets/img/coffee-4.jpg";
+import Menu8 from "@assets/img/wine-1.jpg";
+import Menu9 from "@assets/img/wine-2.jpg";
+import Menu10 from "@assets/img/cocktails.jpg";
 
 import "./menu.scss";
 
