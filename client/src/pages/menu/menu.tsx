@@ -2,14 +2,9 @@ import * as React from "react";
 import { Carousel } from "@app/components";
 import Menu1 from "@assets/img/menu-1.jpg";
 import Menu2 from "@assets/img/menu-2.jpg";
-import Menu3 from "@assets/img/menu-3.jpg";
 import Menu4 from "@assets/img/coffee-1.jpg";
-import Menu5 from "@assets/img/coffee-2.jpg";
-import Menu6 from "@assets/img/coffee-3.jpg";
-import Menu7 from "@assets/img/coffee-4.jpg";
 import Menu8 from "@assets/img/wine-1.jpg";
-import Menu9 from "@assets/img/wine-2.jpg";
-import Menu10 from "@assets/img/cocktails.jpg";
+import Menu10 from "@assets/img/cocktails-1.jpg";
 
 import "./menu.scss";
 
@@ -37,7 +32,7 @@ const Menu: React.FC = () => {
   };
 
   const nextPage = () => {
-    if (pageNumber >= 9) {
+    if (pageNumber >= 4) {
       return;
     }
     setPageNumber(pageNumber + 1);
@@ -52,14 +47,9 @@ const Menu: React.FC = () => {
         <Carousel currentSlide={pageNumber}>
           <img src={Menu1} alt="Page 1" />
           <img src={Menu2} alt="Page 2" />
-          <img src={Menu3} alt="Page 3" />
-          <img src={Menu4} alt="Page 4" />
-          <img src={Menu5} alt="Page 5" />
-          <img src={Menu6} alt="Page 6" />
-          <img src={Menu7} alt="Page 7" />
-          <img src={Menu8} alt="Page 8" />
-          <img src={Menu9} alt="Page 9" />
-          <img src={Menu10} alt="Page 10" />
+          <img src={Menu4} alt="Page 3" />
+          <img src={Menu8} alt="Page 4" />
+          <img src={Menu10} alt="Page 5" />
         </Carousel>
       </div>
       <div className="menu-btns right" onClick={nextPage}></div>
