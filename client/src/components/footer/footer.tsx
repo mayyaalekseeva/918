@@ -28,7 +28,7 @@ const messages = defineMessages({
 const Footer: React.FC = () => {
   const intl = useIntl();
 
-  const contactNumber: string = "+7 (986) 769-00-99";
+  const contactNumber: string = "+7 (905) 666-69-18";
 
   return (
     <footer className="footer">
